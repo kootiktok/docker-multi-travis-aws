@@ -6,7 +6,7 @@ before_install:
   - docker build -t kootiktok/react-test -f ./client/Dockerfile.dev ./client
 
 scripts:
-  - docker run kootiktok/react-test npm run test -- --converage
+  - docker run kootiktok/react-test npm run test -- --coverage
 
 after_success:
   - docker build -t kootiktok/multi-client ./client
