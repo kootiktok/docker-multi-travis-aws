@@ -14,7 +14,7 @@ after_success:
   - docker build -t kootiktok/multi-nginx ./nginx
   - docker build -t kootiktok/multi-server ./server
   - docker build -t kootiktok/multi-worker ./worker
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password --stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push kootiktok/multi-client
   - docker push kootiktok/multi-nginx
   - docker push kootiktok/multi-server
