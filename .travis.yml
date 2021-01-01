@@ -3,7 +3,7 @@ service:
   - docker
 
 before_install:
-  - docker build -t kootiktok/react-test -f Dockerfile.dev ./client
+  - docker build -t kootiktok/react-test -f ./client/Dockerfile.dev ./client
 
 scripts:
   - docker run kootiktok/react-test npm run test -- --converage
